@@ -5,7 +5,8 @@
  *   2. scans Superteam's agent listings for new/open bounties we could win
  *   3. writes a timestamped status.md + appends history.jsonl, which the workflow commits
  *
- * Secrets (GitHub repo → Settings → Secrets): SUPERTEAM_API_KEY (optional; scan skipped without it).
+ * Optional GitHub Actions secrets (scan/rail skipped if unset): SUPERTEAM_API_KEY,
+ * DEALWORK_API_KEY, TOKU_API_KEY. GITHUB_TOKEN is provided automatically in Actions.
  * No private keys ever live here — this process only READS. Earning/spending stays offline.
  */
 import { writeFileSync, appendFileSync, readFileSync, unlinkSync } from 'node:fs'
