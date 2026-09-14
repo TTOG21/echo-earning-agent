@@ -10,7 +10,7 @@
  */
 import { writeFileSync, appendFileSync, readFileSync, unlinkSync } from 'node:fs'
 
-const EVM_WALLET = '0xd194AB36E66BccDD80f19b56757CFe52EdEd49af' // Base USDC receive-only
+const EVM_WALLET = '0x1187e881b1Ad936D6b1651bbF4c6e9E5C5A3D301' // Base USDC receive-only
 const BASE_USDC = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
 const now = new Date().toISOString()
 
@@ -193,7 +193,7 @@ async function hackathonStatus() {
 }
 
 // Solana-side USDC (second payment rail added 2026-07-05; receive-only wallet).
-const SOL_WALLET = '3wbinZDnWmDxHMLtACNrskwZvRwg4KYbBWw1wuviXXHT'
+const SOL_WALLET = 'CzWCraoBejUCJdzHNGJFCHGNoGCjSYoyGGWgPDcdDGNP'
 async function solUsdc() {
   try {
     const r = await fetch('https://api.mainnet-beta.solana.com', {
